@@ -1,0 +1,57 @@
+JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"visible": true
+			"title": "Movie Reservation"
+			"minimumSize": new java.awt.Dimension( 350, 600 )
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "reservationPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "titlePanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "reservationTitle"
+						"text": "영화선택"
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "mainMenu"
+						"minimumSize": new java.awt.Dimension( 50, 50 )
+						"preferredSize": new java.awt.Dimension( 50, 50 )
+						"icon": new com.jformdesigner.model.SwingIcon( 1, "C:\\Users\\mmk27\\IdeaProjects\\untitled\\image\\free-icon-house-802283.png" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "mainMenu", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "North"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+						"rows": 0
+					} ) {
+						name: "movieListPanel"
+						"maximumSize": new java.awt.Dimension( 350, 32767 )
+						"minimumSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"preferredSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 330, 475 )
+		} )
+	}
+}
